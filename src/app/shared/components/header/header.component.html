@@ -1,20 +1,22 @@
 <!-- src/app/shared/components/header/header.component.html -->
 <header class="header">
-    <div class="logo">
-      <a routerLink="/">Tate Mouser</a>
-    </div>
-    
-    <button class="mobile-menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    
-    <nav class="nav" [class.nav-open]="isMenuOpen">
-      <ul class="nav-list">
-        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-        <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="logo">
+    <a routerLink="/">
+      <img src="assets/images/icons/profilePicture.png" alt="Portfolio Logo" class="logo-image">
+    </a>
+  </div>
+  
+  <button class="mobile-menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  
+  <nav class="nav" [class.nav-open]="isMenuOpen">
+    <ul class="nav-list">
+      <li><a routerLink="/home" routerLinkActive="active" (click)="closeMenu()">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a></li>
+    </ul>
+  </nav>    
+</header>
