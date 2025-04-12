@@ -1,0 +1,81 @@
+/* src/app/shared/components/project-card/project-card.component.scss */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: white;
+    height: 100%;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .project-image {
+    height: 200px;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+      color: #666;
+      flex-grow: 1;
+    }
+  }
+  
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    
+    span {
+      background-color: #f0f0f0;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      color: #555;
+    }
+  }
+  
+  .project-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    align-self: flex-start;
+    
+    &:hover {
+      background-color: #0055aa;
+    }
+  }

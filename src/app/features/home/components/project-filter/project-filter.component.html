@@ -1,0 +1,15 @@
+<!-- src/app/features/home/components/project-filter/project-filter.component.html -->
+<div class="filter-container">
+    <div class="filter-buttons">
+      <button 
+        [class.active]="activeType === 'cs'"
+        (click)="switchType('cs')">
+        CS Projects
+      </button>
+      <button 
+        [class.active]="activeType === 'marketing'"
+        (click)="switchType('marketing')">
+        Marketing Projects
+      </button>
+    </div>
+  </div>

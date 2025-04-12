@@ -1,0 +1,24 @@
+<!-- src/app/features/home/home.component.html -->
+<section class="home-container">
+    <div class="intro-section">
+      <h1>Welcome to My Portfolio</h1>
+      <p>I specialize in both Computer Science and Marketing projects. Check out my work below.</p>
+    </div>
+    
+    <app-project-filter 
+      [activeType]="activeProjectType" 
+      (typeChange)="switchProjects($event)">
+    </app-project-filter>
+    
+    <div class="projects-section">
+      <app-cs-projects 
+        *ngIf="activeProjectType === 'cs'" 
+        @projectsAnimation>
+      </app-cs-projects>
+      
+      <app-marketing-projects 
+        *ngIf="activeProjectType === 'marketing'" 
+        @projectsAnimation>
+      </app-marketing-projects>
+    </div>
+  </section>
