@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { ProjectFilterComponent } from './components/project-filter/project-filter.component';
 import { CsProjectsComponent } from './components/cs-projects/cs-projects.component';
-import { MarketingProjectsComponent } from './components/marketing-projects/marketing-projects.component';
+import { NetProjectsComponent } from './components/marketing-projects/net-projects.component';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +13,7 @@ import { MarketingProjectsComponent } from './components/marketing-projects/mark
     CommonModule,
     ProjectFilterComponent,
     CsProjectsComponent,
-    MarketingProjectsComponent
+    NetProjectsComponent
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
@@ -30,9 +30,9 @@ import { MarketingProjectsComponent } from './components/marketing-projects/mark
   ]
 })
 export class HomeComponent {
-  activeProjectType: 'cs' | 'marketing' = 'cs';
+  activeProjectType: 'cs' | 'net' = 'cs';
 
-  switchProjects(type: 'cs' | 'marketing'): void {
+  switchProjects(type: 'cs' | 'net'): void {
     this.activeProjectType = type;
   }
 }

@@ -1,4 +1,4 @@
-// src/app/features/home/components/marketing-projects/marketing-projects.component.ts
+// src/app/features/home/components/net-projects/net-projects.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectCardComponent } from '../../../../shared/components/project-card/project-card.component';
@@ -13,13 +13,13 @@ interface Project {
 }
 
 @Component({
-  selector: 'app-marketing-projects',
+  selector: 'app-net-projects',
   standalone: true,
   imports: [CommonModule, ProjectCardComponent],
-  templateUrl: './marketing-projects.component.html',
-  styleUrls: ['./marketing-projects.component.scss']
+  templateUrl: './net-projects.component.html',
+  styleUrls: ['./net-projects.component.scss']
 })
-export class MarketingProjectsComponent {
+export class NetProjectsComponent {
   projects: Project[] = [
     {
       id: 1,

@@ -2,14 +2,14 @@
 <div class="filter-container">
     <div class="filter-buttons">
       <button 
+        [class.active]="activeType === 'net'"
+        (click)="switchType('net')">
+        C# / .NET Projects
+      </button>
+      <button 
         [class.active]="activeType === 'cs'"
         (click)="switchType('cs')">
         Code Projects
-      </button>
-      <button 
-        [class.active]="activeType === 'marketing'"
-        (click)="switchType('marketing')">
-        Marketing Projects
       </button>
     </div>
   </div>

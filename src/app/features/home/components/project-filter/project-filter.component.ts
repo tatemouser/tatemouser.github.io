@@ -10,10 +10,10 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./project-filter.component.scss']
 })
 export class ProjectFilterComponent {
-  @Input() activeType: 'cs' | 'marketing' = 'cs';
-  @Output() typeChange = new EventEmitter<'cs' | 'marketing'>();
+  @Input() activeType: 'cs' | 'net' = 'cs';
+  @Output() typeChange = new EventEmitter<'cs' | 'net'>();
 
-  switchType(type: 'cs' | 'marketing'): void {
+  switchType(type: 'cs' | 'net'): void {
     if (type !== this.activeType) {
       this.typeChange.emit(type);
     }
