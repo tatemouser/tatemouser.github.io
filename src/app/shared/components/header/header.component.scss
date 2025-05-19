@@ -1,5 +1,4 @@
-/* src/app/shared/components/header/header.component.scss */
-.header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,6 +49,38 @@
     &:hover, &.active {
       color: #0066cc;
     }
+  }
+  
+  li:last-child a {
+    background-image: linear-gradient(
+      to right, 
+      #ff0000, // Red
+      #ff8000, // Orange
+      #ffff00, // Yellow
+      #00ff00, // Green
+      #0000ff, // Blue
+      #4b0082, // Indigo
+      #9400d3  // Violet
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    animation: rainbow-animation 5s linear infinite;
+    background-size: 400% 100%;
+    
+    &:hover, &.active {
+      animation-duration: 2s; // Speed up animation on hover
+    }
+  }
+}
+
+@keyframes rainbow-animation {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 100% 0;
   }
 }
 

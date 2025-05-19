@@ -27,23 +27,23 @@ export class NetProjectsComponent {
       description: 'Under Construction',
       imageUrl: 'assets/images/icons/TEMPIMAGE.png',
       technologies: [],
-      link: 'https://example.com/marketing1'
+      link: 'https://github.com/tatemouser'
     },
     {
-      id: 1,
+      id: 2,
       title: 'Coming Soon',
       description: 'Under Construction',
       imageUrl: 'assets/images/icons/TEMPIMAGE.png',
       technologies: [],
-      link: 'https://example.com/marketing1'
+      link: 'https://github.com/tatemouser'
     },
     {
-      id: 1,
+      id: 3,
       title: 'Coming Soon',
       description: 'Under Construction',
       imageUrl: 'assets/images/icons/TEMPIMAGE.png',
       technologies: [],
-      link: 'https://example.com/marketing1'
+      link: 'https://github.com/tatemouser'
     }
   ];
 }

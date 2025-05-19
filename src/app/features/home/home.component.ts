@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { ProjectFilterComponent } from './components/project-filter/project-filter.component';
 import { CsProjectsComponent } from './components/cs-projects/cs-projects.component';
-import { NetProjectsComponent } from './components/marketing-projects/net-projects.component';
+import { NetProjectsComponent } from './components/net-projects/net-projects.component';
 
 @Component({
   selector: 'app-home',

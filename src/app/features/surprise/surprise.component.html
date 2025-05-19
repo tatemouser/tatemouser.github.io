@@ -1,0 +1,49 @@
+<!-- change site color
+adjust text color
+replace profile pic
+change font
+rickroll **********
+play game
+free site
+Languages
+destroy mode / earthquake
+laser pointer on Mouse
+dance party
+leave site -->
+
+<div class="surprise-wrapper">
+  <h2>Control Panel</h2>
+
+  <div class="control-panel">
+
+    <div class="control-card">
+        <label>Text Color</label>
+        <input type="color" (input)="changeTextColor($event)" />
+    </div>
+
+    <div class="control-card">
+      <label>Font Size</label>
+      <input type="range" min="10" max="40" />
+    </div>
+
+    <div class="control-card">
+      <label>Theme Switch</label>
+      <button>Toggle Theme</button>
+    </div>
+
+    <div class="control-card">
+      <label>Dial (Placeholder)</label>
+      <input type="range" min="0" max="100" />
+    </div>
+
+    <div class="control-card">
+      <label>Lever (Placeholder)</label>
+      <input type="range" min="0" max="100" />
+    </div>
+
+    <div class="control-card">
+        <label>Leave Site</label>
+        <button class="big-button" (click)="leaveSite()">Don't Press</button>
+    </div>
+  </div>
+</div>

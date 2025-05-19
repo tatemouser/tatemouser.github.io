@@ -23,7 +23,7 @@
       
       &.active {
         background-color: #0066cc;
-        color: white;
+        color: var(--text-color, white);
       }
       
       &:hover:not(.active) {

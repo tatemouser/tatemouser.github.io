@@ -27,7 +27,7 @@ export class CsProjectsComponent {
       description: 'Shop by swiping! Users swipe to add or skip items, filter cart contents, and check out. Built with React, Node.js, MySQL, and JWT auth.',
       imageUrl: 'assets/images/projects/swipe.png',
       technologies: ['React', 'Node.js', 'MySQL'],
-      link: 'https://github.com/example/swipe-shopping'
+      link: 'https://github.com/tatemouser'
     },
     {
       id: 2,
@@ -35,15 +35,15 @@ export class CsProjectsComponent {
       description: 'Simple library management system with patron/librarian roles. Includes filtering, user management, and SQL protection.',
       imageUrl: 'assets/images/projects/library.png',
       technologies: ['Flask', 'SQLite', 'AJAX'],
-      link: 'https://github.com/example/library-system'
+      link: 'https://github.com/tatemouser/sqlite-db'
     },
     {
       id: 3,
-      title: 'AutoCorrect App',
+      title: 'AutoCorrect with Token Prediction Training',
       description: 'Java program predicts words from a 10-button input using bigram language model. Displays all possible combinations and scores.',
       imageUrl: 'assets/images/projects/autocorrect.png',
       technologies: ['Java', 'CSV', 'Swing'],
-      link: 'https://github.com/example/autocorrect'
+      link: 'https://github.com/tatemouser/NoKeyboardAlgorithm'
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ export class CsProjectsComponent {
       description: 'Analyzes text from a URL and shows percentages for 10 emotions using a training dataset and prefix tree structure.',
       imageUrl: 'assets/images/projects/sentiment.png',
       technologies: ['Java', 'CSV', 'SWT'],
-      link: 'https://github.com/example/sentiment-analysis'
+      link: 'https://github.com/tatemouser/SentimentAnalysis'
     },
     {
       id: 5,
@@ -59,7 +59,7 @@ export class CsProjectsComponent {
       description: 'Java app locates items on a shelf using scraped Google images, OpenCV object detection, and SURF descriptor matching.',
       imageUrl: 'assets/images/projects/vision.png',
       technologies: ['Java', 'OpenCV', 'JSoup'],
-      link: 'https://github.com/example/order-fulfillment'
+      link: 'https://github.com/tatemouser/InStoreRobot'
     },
     {
       id: 6,
@@ -67,7 +67,7 @@ export class CsProjectsComponent {
       description: 'Responsive site with before/after slider, service area map, and modular layout. Designed for reuse and clarity.',
       imageUrl: 'assets/images/projects/lawn.png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
-      link: 'https://github.com/example/lawn-site'
+      link: 'https://github.com/tatemouser'
     },
     {
       id: 7,
@@ -75,7 +75,7 @@ export class CsProjectsComponent {
       description: 'Resource site for pickleball players with a live court positioning game and trivia overlay. Fully responsive.',
       imageUrl: 'assets/images/projects/pickleball.png',
       technologies: ['HTML', 'JavaScript', 'CSS'],
-      link: 'https://github.com/example/pickleball-site'
+      link: 'https://github.com/tatemouser'
     },
     {
       id: 8,
@@ -83,7 +83,7 @@ export class CsProjectsComponent {
       description: 'Business landing page with live QR code, service map, and interactive sliding header. Optimized for all screens.',
       imageUrl: 'assets/images/projects/taco.png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
-      link: 'https://github.com/example/food-site'
+      link: 'https://github.com/tatemouser'
     },
     {
       id: 9,
@@ -91,7 +91,15 @@ export class CsProjectsComponent {
       description: 'A custom strategy game combining tic-tac-toe and piece movement after 6 turns. Built in MATLAB with win visuals.',
       imageUrl: 'assets/images/projects/matlab.png',
       technologies: ['MATLAB'],
-      link: 'https://github.com/example/matlab-game'
+      link: 'https://github.com/tatemouser'
+    },
+    {
+      id: 10,
+      title: 'Coming Soon',
+      description: 'Under Construction',
+      imageUrl: 'assets/images/icons/TEMPIMAGE.png',
+      technologies: [],
+      link: 'https://github.com/tatemouser'
     }
   ];
 }
