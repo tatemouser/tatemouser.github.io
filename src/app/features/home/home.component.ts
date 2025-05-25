@@ -5,6 +5,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
 import { ProjectFilterComponent } from './components/project-filter/project-filter.component';
 import { CsProjectsComponent } from './components/cs-projects/cs-projects.component';
 import { NetProjectsComponent } from './components/net-projects/net-projects.component';
+import { OpenProjectsComponent } from './components/open-projects/open-projects.component';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ import { NetProjectsComponent } from './components/net-projects/net-projects.com
     CommonModule,
     ProjectFilterComponent,
     CsProjectsComponent,
-    NetProjectsComponent
+    NetProjectsComponent,
+    OpenProjectsComponent
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
@@ -30,9 +32,9 @@ import { NetProjectsComponent } from './components/net-projects/net-projects.com
   ]
 })
 export class HomeComponent {
-  activeProjectType: 'cs' | 'net' = 'cs';
+  activeProjectType: 'cs' | 'net' | 'open' = 'cs';
 
-  switchProjects(type: 'cs' | 'net'): void {
+  switchProjects(type: 'cs' | 'net' | 'open'): void { 
     this.activeProjectType = type;
   }
 }

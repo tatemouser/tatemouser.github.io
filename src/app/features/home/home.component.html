@@ -20,5 +20,10 @@
         *ngIf="activeProjectType === 'net'" 
         @projectsAnimation>
       </app-net-projects>
+
+      <app-open-projects 
+        *ngIf="activeProjectType === 'open'" 
+        @projectsAnimation>
+      </app-open-projects>
     </div>
   </section>

@@ -92,14 +92,6 @@ export class CsProjectsComponent {
       imageUrl: 'assets/images/projects/matlab.png',
       technologies: ['MATLAB'],
       link: 'https://github.com/tatemouser'
-    },
-    {
-      id: 10,
-      title: 'Coming Soon',
-      description: 'Under Construction',
-      imageUrl: 'assets/images/icons/TEMPIMAGE.png',
-      technologies: [],
-      link: 'https://github.com/tatemouser'
     }
   ];
 }
