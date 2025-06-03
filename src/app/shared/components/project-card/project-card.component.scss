@@ -1,17 +1,17 @@
-/* src/app/shared/components/project-card/project-card.component.scss */
 .project-card {
   display: flex;
   flex-direction: column;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #1a1a1a;
+  font-family: 'Courier New', monospace;
+  box-shadow: 0 6px 14px rgba(0, 255, 156, 0.05);
   transition: transform 0.3s, box-shadow 0.3s;
-  background-color: white;
   height: 100%;
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 255, 156, 0.1);
   }
 }
 
@@ -42,13 +42,14 @@
     margin-top: 0;
     margin-bottom: 0.75rem;
     font-size: 1.5rem;
-    color: var(--text-color, #555);
+    color: var(--text-color, #ffffff);
   }
 
   p {
     margin-bottom: 1rem;
-    color: var(--text-color, #555);
+    color: var(--text-color, #cccccc);
     flex-grow: 1;
+    font-size: 0.95rem;
   }
 }
 
@@ -59,11 +60,12 @@
   margin-bottom: 1rem;
 
   span {
-    background-color: #f0f0f0;
+    background-color: #00ff9c22;
     padding: 0.3rem 0.6rem;
     border-radius: 4px;
-    font-size: 0.8rem;
-    color: var(--text-color, #555);
+    font-size: 0.75rem;
+    color: var(--text-color, #00ff9c);
+    border: 1px solid #00ff9c33;
   }
 }
 
@@ -86,33 +88,39 @@
   height: 1.75rem;
   width: auto;
   object-fit: contain;
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 4px;
+  filter: drop-shadow(0 0 4px rgba(0, 255, 156, 0.2));
 }
 
 .project-link {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: #0066cc;
-  color: var(--text-color, white); 
+  background-color: #00ff9c;
+  color: #121212;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 6px;
   transition: background-color 0.2s;
   align-self: flex-start;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
 
   &:hover {
-    background-color: #0055aa;
+    background-color: #00e88c;
   }
 }
 
 .rainbow-button {
   background: linear-gradient(
     to right,
-    #ff0000,   // Red
-    #ff7f00,   // Orange
-    #ffff00,   // Yellow
-    #00ff00,   // Green
-    #0000ff,   // Blue
-    #4b0082,   // Indigo
-    #9400d3    // Violet
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #9400d3
   );
   color: white !important;
   font-weight: bold;

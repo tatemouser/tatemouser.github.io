@@ -35,7 +35,8 @@ export class ProjectCardComponent {
     'OpenCV': 'https://cdn.simpleicons.org/opencv/5C3EE8',
     'SQLite': 'https://cdn.simpleicons.org/sqlite/003B57',
     'Firebase': 'https://firebase.google.com/downloads/brand-guidelines/PNG/logo-logomark.png',
-    'Angular': 'https://cdn.simpleicons.org/angular/DD0031'
+    'Angular': 'https://cdn.simpleicons.org/angular/DD0031',
+    'C#': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
   };
 
   get displayTechnologies(): string[] {

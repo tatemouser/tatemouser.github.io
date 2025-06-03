@@ -1,5 +1,5 @@
 // src/app/features/home/home.component.ts
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { ProjectFilterComponent } from './components/project-filter/project-filter.component';
@@ -31,10 +31,43 @@ import { OpenProjectsComponent } from './components/open-projects/open-projects.
     ])
   ]
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
+  @ViewChild('typewriter', { static: true }) typewriterRef!: ElementRef;
+  @ViewChild('imageButton', { static: true }) imageButtonRef!: ElementRef;
+  @ViewChild('introText', { static: true }) introTextRef!: ElementRef;
   activeProjectType: 'cs' | 'net' | 'open' = 'cs';
 
-  switchProjects(type: 'cs' | 'net' | 'open'): void { 
+  constructor(private renderer: Renderer2) {}
+
+  switchProjects(type: 'cs' | 'net' | 'open'): void {
     this.activeProjectType = type;
+  }
+
+  ngAfterViewInit(): void {
+    const text = 'Hello World!';
+    const element = this.typewriterRef.nativeElement;
+    let i = 0;
+
+    // Initial delay before typing
+    setTimeout(() => {
+      const typeInterval = setInterval(() => {
+        if (i < text.length) {
+          element.textContent += text.charAt(i);
+          i++;
+        } else {
+          clearInterval(typeInterval);
+
+          // Simulate button press animation after typing
+          setTimeout(() => {
+            this.renderer.addClass(this.imageButtonRef.nativeElement, 'pressed');
+            this.renderer.addClass(this.introTextRef.nativeElement, 'fade-in-p');
+
+            setTimeout(() => {
+              this.renderer.removeClass(this.imageButtonRef.nativeElement, 'pressed');
+            }, 200);
+          }, 500);
+        }
+      }, 100);
+    }, 1500); // initial delay before typing
   }
 }

@@ -22,12 +22,12 @@ interface Project {
 export class NetProjectsComponent {
   projects: Project[] = [
     {
-      id: 1,
-      title: 'Coming Soon',
-      description: 'Under Construction',
-      imageUrl: 'assets/images/icons/TEMPIMAGE.png',
-      technologies: [],
-      link: 'https://github.com/tatemouser'
+      id: 11,
+      title: 'Dummy Data Generator',
+      description: 'Create mock data using a console app or Web API. Supports CSV/JSON output, test automation, live preview, and over 35 unit, validation, and API tests with CI.',
+      imageUrl: 'assets/images/projects/generator.png',
+      technologies: ['.NET', 'Web API', 'xUnit', 'GitHub Actions', 'Console App', 'CSV/JSON', 'Validation', 'Testing','C#'],
+      link: 'https://github.com/tatemouser/DummyDataGenerator-ConsoleAppp',
     },
     {
       id: 2,

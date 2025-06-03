@@ -1,29 +1,34 @@
-<!-- src/app/features/home/home.component.html -->
 <section class="home-container">
-    <div class="intro-section">
-      <h1>Hello World!</h1>
-      <p>I’m a full-stack developer with years of experience and a strong Computer Science background, focused on building clean, scalable applications.</p>
+  <div class="terminal-wrapper">
+    <div class="terminal-header">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
     </div>
-    
-    <app-project-filter 
-      [activeType]="activeProjectType" 
-      (typeChange)="switchProjects($event)">
-    </app-project-filter>
-    
-    <div class="projects-section">
-      <app-cs-projects 
-        *ngIf="activeProjectType === 'cs'" 
-        @projectsAnimation>
-      </app-cs-projects>
-      
-      <app-net-projects 
-        *ngIf="activeProjectType === 'net'" 
-        @projectsAnimation>
-      </app-net-projects>
 
-      <app-open-projects 
-        *ngIf="activeProjectType === 'open'" 
-        @projectsAnimation>
-      </app-open-projects>
+    <div class="terminal-body">
+      <h1><span #typewriter></span></h1>
+
+      <button
+        #imageButton
+        class="pressable-image-button"
+        aria-label="Run"
+      >
+        <img src="../../../assets/images/icons/enter.png" alt="Run" />
+      </button>
     </div>
-  </section>
+  </div>
+
+  <p #introText class="intro-paragraph">I’m a full-stack developer with years of experience and a strong Computer Science background, focused on building clean, scalable applications.</p>
+
+  <app-project-filter
+    [activeType]="activeProjectType"
+    (typeChange)="switchProjects($event)"
+  ></app-project-filter>
+
+  <div class="projects-section">
+    <app-cs-projects *ngIf="activeProjectType === 'cs'" @projectsAnimation></app-cs-projects>
+    <app-net-projects *ngIf="activeProjectType === 'net'" @projectsAnimation></app-net-projects>
+    <app-open-projects *ngIf="activeProjectType === 'open'" @projectsAnimation></app-open-projects>
+  </div>
+</section>
