@@ -22,7 +22,7 @@ interface Project {
 export class NetProjectsComponent {
   projects: Project[] = [
     {
-      id: 11,
+      id: 1,
       title: 'Dummy Data Generator',
       description: 'Create mock data using a console app or Web API. Supports CSV/JSON output, test automation, live preview, and over 35 unit, validation, and API tests with CI.',
       imageUrl: 'assets/images/projects/generator.png',

@@ -67,25 +67,28 @@
     background: transparent;
     border: none;
     cursor: pointer;
-    transition: transform 0.15s ease;
     display: inline-block;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 
     img {
-      height: 12vh; // dynamic size based on viewport height
-      max-height: 25%; // keeps it in balance with terminal
+      height: 12vh;
+      max-height: 25%;
       aspect-ratio: 1 / 1;
       object-fit: contain;
       pointer-events: none;
       user-select: none;
-      filter: drop-shadow(0 0 6px #00ff9c);
+      filter: drop-shadow(0 0 6px #e5e5e5);
+      transition: transform 0.1s ease-in-out;
     }
 
-    &.pressed {
-      animation: pressDown 0.7s ease;
+    &.pressed img {
+      transform: scale(0.88);
+      filter: brightness(0.8) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
     }
 
-    &:hover {
+    &:hover img {
       transform: scale(1.05);
+      filter: brightness(1.2);
     }
   }
 }

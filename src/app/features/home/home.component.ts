@@ -35,7 +35,10 @@ export class HomeComponent implements AfterViewInit {
   @ViewChild('typewriter', { static: true }) typewriterRef!: ElementRef;
   @ViewChild('imageButton', { static: true }) imageButtonRef!: ElementRef;
   @ViewChild('introText', { static: true }) introTextRef!: ElementRef;
+
   activeProjectType: 'cs' | 'net' | 'open' = 'cs';
+  hasTyped = false;
+  showIntro = true;
 
   constructor(private renderer: Renderer2) {}
 
@@ -48,7 +51,6 @@ export class HomeComponent implements AfterViewInit {
     const element = this.typewriterRef.nativeElement;
     let i = 0;
 
-    // Initial delay before typing
     setTimeout(() => {
       const typeInterval = setInterval(() => {
         if (i < text.length) {
@@ -57,10 +59,10 @@ export class HomeComponent implements AfterViewInit {
         } else {
           clearInterval(typeInterval);
 
-          // Simulate button press animation after typing
           setTimeout(() => {
             this.renderer.addClass(this.imageButtonRef.nativeElement, 'pressed');
             this.renderer.addClass(this.introTextRef.nativeElement, 'fade-in-p');
+            this.hasTyped = true;
 
             setTimeout(() => {
               this.renderer.removeClass(this.imageButtonRef.nativeElement, 'pressed');
@@ -68,6 +70,25 @@ export class HomeComponent implements AfterViewInit {
           }, 500);
         }
       }, 100);
-    }, 1500); // initial delay before typing
+    }, 1500);
+
+    // Add click handler
+    this.renderer.listen(this.imageButtonRef.nativeElement, 'click', () => {
+      if (!this.hasTyped) return; // Skip if typewriter animation isn't done yet
+
+      this.renderer.addClass(this.imageButtonRef.nativeElement, 'pressed');
+
+      if (this.showIntro) {
+        this.renderer.removeClass(this.introTextRef.nativeElement, 'fade-in-p');
+      } else {
+        this.renderer.addClass(this.introTextRef.nativeElement, 'fade-in-p');
+      }
+
+      this.showIntro = !this.showIntro;
+
+      setTimeout(() => {
+        this.renderer.removeClass(this.imageButtonRef.nativeElement, 'pressed');
+      }, 200);
+    });
   }
 }

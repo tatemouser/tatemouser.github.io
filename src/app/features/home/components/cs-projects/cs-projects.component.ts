@@ -29,7 +29,7 @@ export class CsProjectsComponent {
       description: 'Turn audio or images into smart, summarized notes. Upload lectures or handwritten notes and get clean text and summaries instantly. Easy to use, secure, and powered by Google AI.',
       imageUrl: 'assets/images/projects/note.png',
       technologies: ['Google Cloud','OAuth2','Gemini Summary AI','Image-to-Text AI','Speech-to-Text AI','JWT','Angular', 'Node.js', 'Firebase', 'JavaScript'],
-      link: 'https://github.com/tatemouser/NoteAI',
+      link: 'notes-ai',
       customButtonClass: 'rainbow-button'
     },
     {
@@ -78,15 +78,15 @@ export class CsProjectsComponent {
       description: 'Responsive site with before/after slider, service area map, and modular layout. Designed for reuse and clarity.',
       imageUrl: 'assets/images/projects/lawn.png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
-      link: 'https://github.com/tatemouser'
+      link: 'https://github.com/tatemouser/business-front.git'
     },
     {
       id: 8,
-      title: 'Pickleball Site',
+      title: 'Pickleball Site (Live)',
       description: 'Resource site for pickleball players with a live court positioning game and trivia overlay. Fully responsive.',
       imageUrl: 'assets/images/projects/pickleball.png',
       technologies: ['HTML', 'JavaScript', 'CSS'],
-      link: 'https://github.com/tatemouser'
+      link: 'https://howtopickleball.net/'
     },
     {
       id: 9,
@@ -94,7 +94,7 @@ export class CsProjectsComponent {
       description: 'Business landing page with live QR code, service map, and interactive sliding header. Optimized for all screens.',
       imageUrl: 'assets/images/projects/taco.png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
-      link: 'https://github.com/tatemouser'
+      link: 'https://github.com/tatemouser/local-site'
     },
     {
       id: 10,

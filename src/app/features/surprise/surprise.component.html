@@ -5,16 +5,6 @@
   <div class="control-panel">
 
     <div class="control-card">
-      <label>Change Site Text Color</label>
-      <input type="color" (input)="changeTextColor($event)" />
-    </div>
-
-    <div class="control-card">
-      <label>Laser Pointer</label>
-      <button (click)="toggleLaser()">START</button>
-    </div>
-
-    <div class="control-card">
       <label>Earthquake Mode</label>
       <button (click)="toggleEarthquake()">START</button>
     </div>
@@ -30,7 +20,18 @@
     </div>
 
     <div class="control-card">
-      <label>Set Favicon</label>
+      <label>Change Site Text Color</label>
+      <input type="color" (input)="changeTextColor($event)" />
+    </div>
+
+    <div class="control-card">
+      <label>Laser Pointer</label>
+      <button (click)="toggleLaser()">START</button>
+    </div>
+
+
+    <div class="control-card">
+      <label>Set Favicon (Desktop)</label>
       <button (click)="setFavicon('assets/favicon1.ico')">Classic</button>
       <button (click)="setFavicon('assets/favicon2.ico')">🤖</button>
       <button (click)="setFavicon('assets/favicon3.ico')">👽</button>
