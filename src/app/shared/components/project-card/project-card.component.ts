@@ -37,6 +37,8 @@ export class ProjectCardComponent {
     'Firebase': 'https://firebase.google.com/downloads/brand-guidelines/PNG/logo-logomark.png',
     'Angular': 'https://cdn.simpleicons.org/angular/DD0031',
     'C#': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
+    'SQL Server': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg',
+    'CLI': 'https://img.icons8.com/windows/32/console.png'
   };
 
   get displayTechnologies(): string[] {
