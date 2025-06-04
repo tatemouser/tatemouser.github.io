@@ -27,7 +27,7 @@ export class NetProjectsComponent {
       description: 'Full-stack .NET Web API with secure CRUD functionality to manage portfolio content live from an Angular frontend. Features JWT authentication, admin-only access, SQL Server integration, and  Azure deployment for dynamic project updates without editing code.',
       imageUrl: 'assets/images/projects/cms.png',
       technologies: ['.NET', 'Web API', 'Entity Framework', 'Azure', 'JWT', 'SQL Server', 'C#', 'Angular', 'REST', 'SQL','Authentication','xUnit'],
-      link: 'https://github.com/tatemouser/PortfolioCMS-API',
+      link: 'https://github.com/tatemouser',
     },
     {
       id: 2,
