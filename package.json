@@ -4,9 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href=/",
+    "build": "ng build --configuration production",
+    "build:dev": "ng build --base-href=/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
+  },
+  "engines": {
+    "node": "20.11.1",
+    "npm": ">=9.0.0"
   },
   "private": true,
   "dependencies": {
