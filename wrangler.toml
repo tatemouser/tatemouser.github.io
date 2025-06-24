@@ -1,0 +1,8 @@
+@"
+[build]
+command = "npm run build"
+destination = "dist/tatemouser-site-angular"
+
+[build.environment]
+NODE_VERSION = "20.11.1"
+"@ | Out-File -FilePath wrangler.toml -Encoding ascii
