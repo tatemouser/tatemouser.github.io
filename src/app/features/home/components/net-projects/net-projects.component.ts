@@ -10,6 +10,7 @@ interface Project {
   imageUrl: string;
   technologies: string[];
   link?: string;
+  customButtonClass?: string; 
 }
 
 @Component({
@@ -23,12 +24,29 @@ export class NetProjectsComponent {
   projects: Project[] = [
     {
       id: 1,
-      title: 'Portfolio Content Management System',
-      description: 'Full-stack .NET Web API with secure CRUD functionality to manage portfolio content live from an Angular frontend. Features JWT authentication, admin-only access, SQL Server integration, and  Azure deployment for dynamic project updates without editing code.',
-      imageUrl: 'assets/images/projects/cms.png',
-      technologies: ['.NET', 'Web API', 'Entity Framework', 'Azure', 'JWT', 'SQL Server', 'C#', 'Angular', 'REST', 'SQL','Authentication','xUnit'],
-      link: 'https://github.com/tatemouser',
-    },
+      title: 'LinkedInBanners.net',
+      description: 'A tool that creates personalized LinkedIn banners based on your career info. Just answer a few questions, and it designs a banner for you.',
+      imageUrl: 'assets/images/projects/banner.png',
+      technologies: [
+        '.NET',
+        'Azure',
+        'OAuth2', 
+        'AI', 
+        'Image Cropping', 
+        'SaaS', 
+        'Local Storage', 
+        'CI/CD', 
+        'Angular', 
+        'JWT', 
+        'Blob Storage', 
+        'REST API',
+        'C#', 
+        'TypeScript',         
+        'SQL Server'
+      ],
+      link: 'banners-ai',
+      customButtonClass: 'rainbow-button'
+      },
     {
       id: 2,
       title: 'Dummy Data Generator',
@@ -39,11 +57,11 @@ export class NetProjectsComponent {
     },
     {
       id: 3,
-      title: 'Coming Soon',
-      description: 'Under Construction',
-      imageUrl: 'assets/images/icons/TEMPIMAGE.png',
-      technologies: [],
-      link: 'https://github.com/tatemouser'
+      title: 'Portfolio Content Management System',
+      description: 'Full-stack .NET Web API with secure CRUD functionality to manage portfolio content live from an Angular frontend. Features JWT authentication, admin-only access, SQL Server integration, and  Azure deployment for dynamic project updates without editing code.',
+      imageUrl: 'assets/images/projects/cms.png',
+      technologies: ['.NET', 'Web API', 'Entity Framework', 'Azure', 'JWT', 'SQL Server', 'C#', 'Angular', 'REST', 'SQL','Authentication','xUnit'],
+      link: 'https://github.com/tatemouser',
     },
     {
       id: 4,

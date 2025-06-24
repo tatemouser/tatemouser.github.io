@@ -28,7 +28,7 @@ export class CsProjectsComponent {
       title: 'Notes.ai',
       description: 'Turn audio or images into smart, summarized notes. Upload lectures or handwritten notes and get clean text and summaries instantly. Easy to use, secure, and powered by Google AI.',
       imageUrl: 'assets/images/projects/note.png',
-      technologies: ['Google Cloud','OAuth2','Gemini Summary AI','Image-to-Text AI','Speech-to-Text AI','JWT','Angular', 'Node.js', 'Firebase', 'JavaScript'],
+      technologies: ['Google Cloud','OAuth2','Gemini Summary AI','Image-to-Text AI','Speech-to-Text AI','JWT','Angular', 'Node.js', 'Firebase', 'JavaScript', 'TypeScript'],
       link: 'notes-ai',
       customButtonClass: 'rainbow-button'
     },

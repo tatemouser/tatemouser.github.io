@@ -36,7 +36,7 @@ export class HomeComponent implements AfterViewInit {
   @ViewChild('imageButton', { static: true }) imageButtonRef!: ElementRef;
   @ViewChild('introText', { static: true }) introTextRef!: ElementRef;
 
-  activeProjectType: 'cs' | 'net' | 'open' = 'cs';
+  activeProjectType: 'cs' | 'net' | 'open' = 'net';
   hasTyped = false;
   showIntro = true;
 

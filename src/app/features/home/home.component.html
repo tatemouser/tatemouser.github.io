@@ -27,8 +27,8 @@
   ></app-project-filter>
 
   <div class="projects-section">
-    <app-cs-projects *ngIf="activeProjectType === 'cs'" @projectsAnimation></app-cs-projects>
     <app-net-projects *ngIf="activeProjectType === 'net'" @projectsAnimation></app-net-projects>
+    <app-cs-projects *ngIf="activeProjectType === 'cs'" @projectsAnimation></app-cs-projects>
     <app-open-projects *ngIf="activeProjectType === 'open'" @projectsAnimation></app-open-projects>
   </div>
 </section>

@@ -1,8 +1,21 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .home-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
   font-family: 'Courier New', monospace;
+  overflow-x: hidden;
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 1rem;
+  }
 }
 
 .terminal-wrapper {
@@ -151,3 +164,4 @@
     font-size: 1rem;
   }
 }
+

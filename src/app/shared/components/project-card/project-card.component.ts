@@ -38,7 +38,10 @@ export class ProjectCardComponent {
     'Angular': 'https://cdn.simpleicons.org/angular/DD0031',
     'C#': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
     'SQL Server': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg',
-    'CLI': 'https://img.icons8.com/windows/32/console.png'
+    'CLI': 'https://img.icons8.com/windows/32/console.png',
+    'Google Cloud': 'https://img.icons8.com/color/48/000000/google-cloud.png',
+    'Docker': 'https://img.icons8.com/color/48/000000/docker.png',
+    'TypeScript': 'https://img.icons8.com/color/48/000000/typescript.png'
   };
 
   get displayTechnologies(): string[] {
