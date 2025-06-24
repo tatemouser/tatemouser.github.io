@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Courier New', monospace;
+  overflow-x: hidden;
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 1rem;
+  }
+}
+
+.terminal-wrapper {
+  background: #121212;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  font-family: 'Courier New', monospace;
+  color: #00ff9c;
+}
+
+.terminal-header {
+  background: #2c2c2c;
+  padding: 0.75rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+
+  &.red {
+    background: #ff5f56;
+  }
+  &.yellow {
+    background: #ffbd2e;
+  }
+  &.green {
+    background: #27c93f;
+  }
+}
+
+.terminal-body {
+  padding: 2rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+
+    span {
+      color: #ffffff;
+    }
+
+    span::after {
+      content: '|';
+      display: inline-block;
+      margin-left: 4px;
+      animation: blink 1s step-start infinite;
+    }
+  }
+
+
+  .pressable-image-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+    img {
+      height: 12vh;
+      max-height: 25%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      pointer-events: none;
+      user-select: none;
+      filter: drop-shadow(0 0 6px #e5e5e5);
+      transition: transform 0.1s ease-in-out;
+    }
+
+    &.pressed img {
+      transform: scale(0.88);
+      filter: brightness(0.8) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+      filter: brightness(1.2);
+    }
+  }
+}
+
+.intro-paragraph {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  color: black;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.fade-in-p {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes pressDown {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(0.9); 
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+
+.projects-section {
+  margin-top: 2rem;
+  min-height: 400px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .terminal-body h1 {
+    font-size: 1.5rem;
+  }
+
+  .pressable-image-button img {
+    height: 10vh;
+    max-height: 80px;
+  }
+
+  .intro-paragraph {
+    font-size: 1rem;
+  }
+}
+

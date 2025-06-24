@@ -1,0 +1,62 @@
+
+<div class="surprise-wrapper">
+  <h2>Control Panel</h2>
+
+  <div class="control-panel">
+
+    <div class="control-card">
+      <label>Earthquake Mode</label>
+      <button (click)="toggleEarthquake()">START</button>
+    </div>
+
+    <div class="control-card">
+      <label>Dance Party</label>
+      <button (click)="toggleDanceParty()">START</button>
+    </div>
+
+    <div class="control-card">
+      <label>Snake Game</label>
+      <button (click)="snakeVisible = true; startSnake()">START</button>
+    </div>
+
+    <div class="control-card">
+      <label>Change Site Text Color</label>
+      <input type="color" (input)="changeTextColor($event)" />
+    </div>
+
+    <div class="control-card">
+      <label>Laser Pointer</label>
+      <button (click)="toggleLaser()">START</button>
+    </div>
+
+
+    <div class="control-card">
+      <label>Set Favicon (Desktop)</label>
+      <button (click)="setFavicon('assets/favicon1.ico')">Classic</button>
+      <button (click)="setFavicon('assets/favicon2.ico')">🤖</button>
+      <button (click)="setFavicon('assets/favicon3.ico')">👽</button>
+    </div>
+
+    <div class="control-card">
+      <label>Leave Site</label>
+      <button class="big-button" (click)="leaveSite()">Don't Press</button>
+    </div>
+  </div>
+
+  <!-- Snake Game Modal -->
+  <div class="snake-modal" [class.active]="snakeVisible">
+    <div class="snake-content">
+      <h3>🐍 Mobile Snake</h3>
+      <canvas #snakeCanvas width="200" height="200"></canvas>
+      <div class="controls">
+        <button (click)="setSnakeDirection('UP')">⬆️</button>
+        <div>
+          <button (click)="setSnakeDirection('LEFT')">⬅️</button>
+          <button (click)="setSnakeDirection('RIGHT')">➡️</button>
+        </div>
+        <button (click)="setSnakeDirection('DOWN')">⬇️</button>
+      </div>
+      <button class="close-btn" (click)="closeSnake()">Close</button>
+    </div>
+  </div>
+</div>

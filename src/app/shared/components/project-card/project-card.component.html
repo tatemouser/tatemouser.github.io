@@ -1,0 +1,37 @@
+<!-- src/app/shared/components/project-card/project-card.component.html -->
+<div class="project-card">
+  <div class="project-image">
+    <img 
+      [src]="project.imageUrl" 
+      [alt]="project.title"
+      loading="lazy"
+    >
+  </div>
+  <div class="project-content">
+    <h3>{{ project.title }}</h3>
+    <p [innerHTML]="project.description"></p> 
+    <div class="project-tech">
+      <span *ngFor="let tech of displayTechnologies">{{ tech }}</span>
+    </div>
+    <div class="project-footer">
+      <a 
+        *ngIf="project.link"
+        [href]="project.link"
+        target="_blank"
+        class="project-link"
+        [ngClass]="project.customButtonClass"
+      >
+        View Project
+      </a>
+      <div class="project-logos">
+        <img 
+          *ngFor="let tech of logoTechnologies"
+          [src]="logoMap[tech]"
+          [alt]="tech + ' logo'"
+          class="tech-logo"
+          [height]="28"
+        />
+      </div>
+    </div>
+  </div>
+</div>

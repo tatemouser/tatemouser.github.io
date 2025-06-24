@@ -1,0 +1,37 @@
+/* src/app/shared/components/footer/footer.component.scss */
+.footer {
+    background-color: #f5f5f5;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    
+    a {
+      color: #333;
+      font-size: 1.2rem;
+      transition: color 0.2s;
+      
+      &:hover {
+        color: #0066cc;
+      }
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  }
