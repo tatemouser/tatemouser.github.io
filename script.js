@@ -8,7 +8,7 @@ const roles = [
     "I am a Web Developer^1000"
 ];
 
-// Function to update the role strings
+// Function to update the role stringss
 function updateRole() {
     try {
         initializeTyped(roles); // Initialize Typed.js with the predefined roles
