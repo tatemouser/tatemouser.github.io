@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.lottery-btn {
+  padding: 10px 20px;
+  border: 2px solid #ddd;
+  background: white;
+  cursor: pointer;
+
+  &.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type='date'] {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#submit {
+  width: 100%;
+  background: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  &:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+.chart {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+}

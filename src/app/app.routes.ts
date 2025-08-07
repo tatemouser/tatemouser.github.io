@@ -6,7 +6,8 @@ export const routes: Routes = [
   { path: 'contact', loadComponent: () => import('./features/contact/contact.component').then(m => m.ContactComponent) },
   { path: 'surprise', loadComponent: () => import('./features/surprise/surprise.components').then(m => m.SurpriseComponent) },
   { path: 'notes-ai', loadComponent: () => import('./features/home/components/notes-ai/notes-ai.component').then(m => m.NotesAiComponent) },
-    { path: 'banners-ai', loadComponent: () => import('./features/home/components/banners-ai/banners-ai.component').then(m => m.BannersAiComponent) }, 
+  { path: 'banners-ai', loadComponent: () => import('./features/home/components/banners-ai/banners-ai.component').then(m => m.BannersAiComponent) }, 
+  { path: 'lottery', loadComponent: () => import('./features/hidden/lot.component').then(m => m.LotComponent) },
 
   { path: '**', redirectTo: '' }
 ];

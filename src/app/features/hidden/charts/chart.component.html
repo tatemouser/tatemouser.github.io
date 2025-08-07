@@ -1,0 +1,36 @@
+<div class="chart-container">
+  <div class="chart-header">
+    <h3>{{ lotteryType === 'powerball' ? 'Powerball' : 'Mega Millions' }} Analysis</h3>
+    <p class="date-range">From: {{ startDate }} to Today</p>
+  </div>
+
+  <div *ngIf="isLoading" class="loading">
+    <p>Loading chart data...</p>
+  </div>
+
+  <div *ngIf="!isLoading" class="charts-wrapper">
+    <!-- Five Numbers Chart -->
+    <div class="chart-section">
+      <h4>Five Numbers Frequency</h4>
+      <div class="chart-canvas-container">
+        <canvas id="fiveNumbersCanvas"></canvas>
+      </div>
+      <div class="unused-numbers" *ngIf="unusedFiveNumbers.length > 0">
+        <h5>Unused Numbers (1-69):</h5>
+        <span class="unused-number" *ngFor="let num of unusedFiveNumbers">{{ num }}</span>
+      </div>
+    </div>
+
+    <!-- Jackpot Numbers Chart -->
+    <div class="chart-section">
+      <h4>{{ lotteryType === 'powerball' ? 'Powerball' : 'Mega Ball' }} Numbers Frequency</h4>
+      <div class="chart-canvas-container">
+        <canvas id="jackpotNumbersCanvas"></canvas>
+      </div>
+      <div class="unused-numbers" *ngIf="unusedJackpotNumbers.length > 0">
+        <h5>Unused Numbers (1-26):</h5>
+        <span class="unused-number" *ngFor="let num of unusedJackpotNumbers">{{ num }}</span>
+      </div>
+    </div>
+  </div>
+</div>

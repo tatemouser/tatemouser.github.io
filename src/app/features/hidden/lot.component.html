@@ -1,0 +1,42 @@
+<!-- lot.component.html -->
+<div>
+  <div class="button-group">
+    <button class="lottery-btn" [class.active]="selectedLottery === 'powerball'" (click)="selectLottery('powerball')">Powerball</button>
+    <button class="lottery-btn" [class.active]="selectedLottery === 'megamillions'" (click)="selectLottery('megamillions')">Mega Millions</button>
+  </div>
+
+  <div class="form-group">
+    <label for="startDate">Start Date:</label>
+    <input type="date" [(ngModel)]="startDate" (change)="checkFormValid()" max="{{ today }}">
+  </div>
+
+  <button [disabled]="!formValid" (click)="loadHistoricalData()">Show Data</button>
+
+  <div *ngIf="chartVisible">
+    <app-chart [lotteryType]="selectedLottery" [startDate]="startDate"></app-chart>
+  </div>
+
+  <div class="entry-form" *ngIf="selectedLottery === 'powerball'">
+    <h3>Enter Powerball Numbers</h3>
+    <input type="date" [(ngModel)]="powerballEntry.drawDate" max="{{ today }}"><br>
+    <input type="number" [(ngModel)]="powerballEntry.number1" placeholder="Number 1">
+    <input type="number" [(ngModel)]="powerballEntry.number2" placeholder="Number 2">
+    <input type="number" [(ngModel)]="powerballEntry.number3" placeholder="Number 3">
+    <input type="number" [(ngModel)]="powerballEntry.number4" placeholder="Number 4">
+    <input type="number" [(ngModel)]="powerballEntry.number5" placeholder="Number 5">
+    <input type="number" [(ngModel)]="powerballEntry.powerball" placeholder="Powerball">
+    <button (click)="submitPowerballNumbers()">Submit Powerball Entry</button>
+  </div>
+
+  <div class="entry-form" *ngIf="selectedLottery === 'megamillions'">
+    <h3>Enter Mega Millions Numbers</h3>
+    <input type="date" [(ngModel)]="megaMillionEntry.drawDate" max="{{ today }}"><br>
+    <input type="number" [(ngModel)]="megaMillionEntry.number1" placeholder="Number 1">
+    <input type="number" [(ngModel)]="megaMillionEntry.number2" placeholder="Number 2">
+    <input type="number" [(ngModel)]="megaMillionEntry.number3" placeholder="Number 3">
+    <input type="number" [(ngModel)]="megaMillionEntry.number4" placeholder="Number 4">
+    <input type="number" [(ngModel)]="megaMillionEntry.number5" placeholder="Number 5">
+    <input type="number" [(ngModel)]="megaMillionEntry.megaBall" placeholder="Mega Ball">
+    <button (click)="submitMegaMillionNumbers()">Submit Mega Millions Entry</button>
+  </div>
+</div>

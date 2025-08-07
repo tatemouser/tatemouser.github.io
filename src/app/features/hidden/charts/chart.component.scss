@@ -1,0 +1,201 @@
+.chart-container {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.chart-header {
+  text-align: center;
+  margin-bottom: 30px;
+  
+  h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .date-range {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+  }
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.charts-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.chart-section {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  background: #fafafa;
+  
+  h4 {
+    margin: 0 0 20px 0;
+    color: #333;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.chart-canvas-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  overflow-x: auto; // Allow horizontal scrolling if needed
+  width: 100%;
+  
+  canvas {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    min-height: 800px; // Much larger minimum height
+    cursor: pointer; // Show pointer cursor for interactivity
+    max-width: 100%;
+  }
+}
+
+.unused-numbers {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  
+  h5 {
+    margin: 0 0 10px 0;
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .unused-number {
+    display: inline-block;
+    margin: 2px 4px;
+    padding: 4px 8px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #666;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .chart-container {
+    padding: 10px;
+  }
+  
+  .chart-canvas-container {
+    canvas {
+      width: 100% !important;
+      height: auto !important;
+      min-height: 600px; // Maintain minimum height on mobile
+    }
+  }
+}
+
+// Large screen optimization
+@media (min-width: 1200px) {
+  .chart-container {
+    max-width: 95vw;
+  }
+  
+  .chart-canvas-container canvas {
+    width: 100%;
+    max-width: 1400px;
+  }
+}
+
+// Update existing styles from lot.component.scss
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 95vw; // Use most of the viewport width
+  margin: 0 auto;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.lottery-btn {
+  padding: 10px 20px;
+  border: 2px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #f0f0f0;
+  }
+
+  &.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+input[type='date'] {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#submit {
+  width: 100%;
+  background: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+
+  &:hover:not(:disabled) {
+    background: #218838;
+  }
+
+  &:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+#chartContainer {
+  margin-top: 20px;
+}
